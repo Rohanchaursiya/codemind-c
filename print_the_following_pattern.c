@@ -7,12 +7,16 @@ int main()
     {
         for(j=1;j<=N;j++)
         {
-            if(i==j)
-            printf("0");
+            if(j==1||i==j||i==N)
+            {
+            printf("*");
+            }
             else
-            printf("x");
+            {
+            printf(" ");
+            }
         }
         printf("
-"); 
+");
     }
 }
