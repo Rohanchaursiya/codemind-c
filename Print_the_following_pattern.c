@@ -1,15 +1,23 @@
 #include<stdio.h>
 int main()
-{
+ {
     int N,i,j;
     scanf("%d",&N);
-    for(i=1;i<=N;i++)
-    {
-        for(j=i;j<=N;j++)
-        {
-            printf("%d ",j);
+    for(i=N;i>=1;i--)
+	{
+        for(j=1;j<=N;j++)
+		{
+            if(i==j||i+j==N+1)
+            {
+             printf("%d ",i);
+            }
+           else
+           {
+		     printf(" ");
+		   }
         }
-        printf("
-"); 
-    }
-}
+	  printf("
+");
+   }
+   return 0;
+ }
