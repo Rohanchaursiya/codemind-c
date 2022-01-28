@@ -1,21 +1,21 @@
 #include<stdio.h>
 int main()
 {
-    int N,i,j;
+    int N,i,j,k;
     scanf("%d",&N);
-    for(i=1;i<=N;i++)
+    for (  i = N; i >=1; i--)
     {
-        for(j=1;j<=N;j++)
+        for (j = 1; j < i; j++)
         {
-            if(j==1||i==j||i==N)
-            {
-            printf("*");
-            }
-            else
-            {
             printf(" ");
-            }
         }
+        for (k = 1; k <= N; k++)
+        {
+            if(k==1||k==N||i==1||i==N)
+            printf("*");
+            else
+            printf(" ");
+        }       
         printf("
 ");
     }
