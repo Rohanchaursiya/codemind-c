@@ -1,15 +1,16 @@
-#include <stdio.h>
-int main() {
-    int a, b, max;
-    scanf("%d %d", &a, &b);
-    max=(a>b)?a:b;
-
-    while (1) {
-        if (max % a == 0 && max % b == 0) {
-            printf("%d",max);
-            break;
+#include<stdio.h>
+int main()
+{
+    int m,n,max;
+    scanf("%d%d",&m,&n);
+    max=(m>n)?m:n;
+    while(1)
+    {
+        if(max%m==0&&max%n==0){
+        printf("%d",max);
+        break;
         }
-        ++max;
+        max++;
     }
     return 0;
 }
