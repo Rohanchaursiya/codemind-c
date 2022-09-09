@@ -1,22 +1,17 @@
 #include<stdio.h>
-int main()
-{
-    int n,m,r,sum=0;
+int main(){
+    int n,temp,rem=0,sum=0;
     scanf("%d",&n);
-    m=n*n;
-    while(m>0)
-    {
-        r=m%10;
-        sum=sum+r;
-        m=m/10;
+    temp=n*n;
+    while(temp!=0){
+        rem=temp%10;
+        sum+=rem;
+        temp/=10;
     }
-    if(sum==n)
-    {
+    if(sum==n){
         printf("Neon Number");
     }
-    else
-    {
-         printf("Not Neon Number");
+    else{
+        printf("Not Neon Number");
     }
-    return 0;
 }
