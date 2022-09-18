@@ -1,21 +1,19 @@
 #include<stdio.h>
-int main()
-{
+int main(){
     int n;
     scanf("%d",&n);
-    int arr[n],i,a,b,count=0;
-    for(i=0;i<n;i++)
-    {
+    int arr[100];
+    for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
+    int a,b;
     scanf("%d%d",&a,&b);
-    for(i=0;i<n;i++)
-    {
-        if(arr[i]<a||arr[i]>b)
-        {
-            count=count+arr[i];
+    int sum=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]<a || arr[i]>b){
+            sum+=arr[i];
         }
     }
-    printf("%d",count);
-    return 0;
+    
+    printf("%d",sum);
 }
