@@ -3,23 +3,23 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int a[n],i,sum=0,avg;
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
+    int arr[n];
+    int sum=0;
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+        sum+=arr[i];
     }
-    for(i=0;i<n;i++)
-    {
-        sum=sum+a[i];
-    }
-    avg=sum/n;
-    for(i=0;i<n;i++)
-    {
-        if(avg==a[i])
-        {
-            printf("True");
-            return 0;
+    int avg=sum/n;
+    int count=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]==avg){
+            count+=1;
         }
     }
-    printf("False");
+    if(count==0){
+        printf("False");
+    }
+    else{
+        printf("True");
+    }
 }
