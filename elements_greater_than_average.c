@@ -1,22 +1,21 @@
 #include<stdio.h>
-int main()
-{
+int main(){
     int n;
     scanf("%d",&n);
-    int arr[n],i,sum=0,avg,count=0;
-    for(i=0;i<n;i++)
-    {
+    int arr[100];
+    int sum=0;
+    for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
-        sum=sum+arr[i];
+        sum+=arr[i];
     }
+    int avg;
     avg=sum/n;
-    for(i=0;i<n;i++)
-    {
-        if(arr[i]>=avg)
-        {
+    int count=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]>=avg){
             count++;
         }
     }
     printf("%d",count);
-    return 0;
+    
 }
